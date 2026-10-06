@@ -1,11 +1,12 @@
-// Tiny zero-dependency static server for the Maison Tresse prototype.
-// Usage: node server.mjs   (PORT env var optional, default 5317)
+// Tiny zero-dependency static server for local development only.
+// Production (Vercel) serves the site as plain static files — see vercel.json.
+// Usage: npm start   (PORT env var optional, default 5317)
 import http from 'node:http';
 import { readFile } from 'node:fs/promises';
 import { extname, join, normalize, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const root = fileURLToPath(new URL('.', import.meta.url));
+const root = fileURLToPath(new URL('..', import.meta.url));
 const port = Number(process.env.PORT) || 5317;
 const types = {
   '.html': 'text/html; charset=utf-8',
