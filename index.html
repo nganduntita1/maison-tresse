@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maison Tresse — Couture Human Hair Wigs</title>
+  <meta name="description" content="Hand-tied, 100% virgin human hair wigs on invisible HD lace. Shop straight, body wave, curly and coily units, or design your own in the Wig Studio.">
+  <meta name="theme-color" content="#0f0b09">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230f0b09'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-style='italic' font-size='42' fill='%23c9a27e'%3ET%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.className = 'js'; history.scrollRestoration = 'manual';</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Flip.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js" defer></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/hair.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body class="is-loading">
+
+  <!-- Icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20.5s-7.6-4.6-9.6-9.3C.9 7.7 3.1 4 6.9 4c2.2 0 3.7 1.2 5.1 3 1.4-1.8 2.9-3 5.1-3 3.8 0 6 3.7 4.5 7.2-2 4.7-9.6 9.3-9.6 9.3z"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1.1 11.6a2 2 0 0 1-2 1.9H8.1a2 2 0 0 1-2-1.9L5 8z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M4 12h16M14 6l6 6-6 6"/></symbol>
+    <symbol id="i-arrow-ur" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 9h16M4 15h16"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4-4.7-4.4 6.4-.8z"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M12 1c.5 5.6 5.4 10.5 11 11-5.6.5-10.5 5.4-11 11-.5-5.6-5.4-10.5-11-11C6.6 11.5 11.5 6.6 12 1z"/></symbol>
+  </svg>
+
+  <!-- Preloader -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__cols"><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="loader__inner">
+      <div class="loader__brand">Maison <em>Tresse</em></div>
+      <div class="loader__meta">
+        <span>Couture hair</span>
+        <span class="loader__bar"><i></i></span>
+        <span class="loader__count">000</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom cursor -->
+  <div class="cursor" aria-hidden="true">
+    <div class="cursor__ring"><span class="cursor__label">View</span></div>
+    <div class="cursor__dot"></div>
+  </div>
+
+  <div class="progress" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="announce" aria-label="Store announcements">
+      <div class="announce__track">
+        <span>Free express shipping over $250 <svg class="i i--fill"><use href="#i-sparkle"/></svg> 30-day try-on guarantee <svg class="i i--fill"><use href="#i-sparkle"/></svg> Pay in 4 interest-free <svg class="i i--fill"><use href="#i-sparkle"/></svg> Hand-tied HD lace <svg class="i i--fill"><use href="#i-sparkle"/></svg></span>
+        <span aria-hidden="true">Free express shipping over $250 <svg class="i i--fill"><use href="#i-sparkle"/></svg> 30-day try-on guarantee <svg class="i i--fill"><use href="#i-sparkle"/></svg> Pay in 4 interest-free <svg class="i i--fill"><use href="#i-sparkle"/></svg> Hand-tied HD lace <svg class="i i--fill"><use href="#i-sparkle"/></svg></span>
+      </div>
+    </div>
+    <div class="nav">
+      <a class="logo" href="#top" aria-label="Maison Tresse home"><small>Maison</small><span>Tresse</span></a>
+      <nav class="nav__links" aria-label="Primary">
+        <a class="roll" href="#shop"><span data-text="Shop">Shop</span></a>
+        <a class="roll" href="#bestsellers"><span data-text="Bestsellers">Bestsellers</span></a>
+        <a class="roll" href="#studio"><span data-text="Wig Studio">Wig Studio</span></a>
+        <a class="roll" href="#atelier"><span data-text="Atelier">Atelier</span></a>
+        <a class="roll" href="#lookbook"><span data-text="Lookbook">Lookbook</span></a>
+      </nav>
+      <div class="nav__actions">
+        <button class="icon-btn" id="searchBtn" aria-label="Search"><svg class="i"><use href="#i-search"/></svg></button>
+        <button class="icon-btn" id="wishBtn" aria-label="Wishlist"><svg class="i"><use href="#i-heart"/></svg><span class="count" data-wish-count>0</span></button>
+        <button class="icon-btn" id="cartBtn" aria-label="Open bag"><svg class="i"><use href="#i-bag"/></svg><span class="count" data-cart-count>0</span></button>
+        <button class="icon-btn burger" id="burger" aria-label="Menu" aria-expanded="false"><svg class="i"><use href="#i-menu"/></svg></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <canvas class="hero__strands" id="heroStrands" aria-hidden="true"></canvas>
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="eyebrow">The Silk Edit — Autumn 2026</p>
+          <h1 class="hero__title">
+            <span class="line">Hair that</span>
+            <span class="line"><em>moves</em> like</span>
+            <span class="line">you do.</span>
+          </h1>
+          <p class="hero__lead">Couture human-hair wigs, hand-tied on invisible HD lace. Pre-plucked, pre-styled and ready the moment you are.</p>
+          <div class="hero__ctas">
+            <a href="#shop" class="btn btn--gold magnetic">Shop the collection <svg class="i"><use href="#i-arrow"/></svg></a>
+            <a href="#studio" class="btn btn--ghost magnetic">Build your wig</a>
+          </div>
+          <div class="hero__proof">
+            <div class="avatars" id="heroAvatars"></div>
+            <p><span class="stars-inline"><svg class="i i--fill"><use href="#i-star"/></svg> 4.9</span> Loved by 52,000+ wearers</p>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="arch-outline" aria-hidden="true"></div>
+          <div class="arch">
+            <div class="arch__in">
+              <img src="https://images.unsplash.com/photo-1527203561188-dae1bc1a417f?auto=format&fit=crop&w=1000&q=80" alt="Model in profile wearing a sleek braided ponytail against a warm tan backdrop">
+            </div>
+          </div>
+          <div class="spin-badge" aria-hidden="true">
+            <svg class="spin-badge__ring" viewBox="0 0 200 200">
+              <defs><path id="badgeCircle" d="M100,100 m-76,0 a76,76 0 1,1 152,0 a76,76 0 1,1 -152,0"/></defs>
+              <text><textPath href="#badgeCircle" textLength="474" lengthAdjust="spacing">100% virgin human hair ✦ hand-tied HD lace ✦</textPath></text>
+            </svg>
+            <svg class="i i--fill spin-badge__star"><use href="#i-sparkle"/></svg>
+          </div>
+          <button class="float-card" data-open="sable-silk" data-cursor="View">
+            <img src="https://images.unsplash.com/photo-1619218533116-f050e7d91d91?auto=format&fit=crop&w=160&h=190&q=70" alt="">
+            <span><b>Sable Silk</b><small>26" · HD lace · $289</small></span>
+            <svg class="i"><use href="#i-arrow-ur"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="hero__scroll" aria-hidden="true"><span>Scroll</span><i></i></div>
+    </section>
+
+    <!-- TAPES -->
+    <section class="tapes" aria-label="Textures we make">
+      <div class="tape tape--dark" data-dir="-1" aria-hidden="true">
+        <div class="tape__track">
+          <span class="o">Hand-tied</span><svg class="i i--fill"><use href="#i-sparkle"/></svg>
+          <span>HD Lace</span><svg class="i i--fill"><use href="#i-sparkle"/></svg>
+          <span class="o">100% Virgin</span><svg class="i i--fill"><use href="#i-sparkle"/></svg>
+          <span>Glueless</span><svg class="i i--fill"><use href="#i-sparkle"/></svg>
+          <span class="o">Free returns</span><svg class="i i--fill"><use href="#i-sparkle"/></svg>
+        </div>
+      </div>
+      <div class="tape tape--gold" data-dir="1">
+        <div class="tape__track">
+          <span>Straight</span><svg class="i i--fill"><use href="#i-sparkle"/></svg>
+          <span><em>Body Wave</em></span><svg class="i i--fill"><use href="#i-sparkle"/></svg>
+          <span>Deep Curl</span><svg class="i i--fill"><use href="#i-sparkle"/></svg>
+          <span><em>Kinky Coily</em></span><svg class="i i--fill"><use href="#i-sparkle"/></svg>
+          <span>Water Wave</span><svg class="i i--fill"><use href="#i-sparkle"/></svg>
+          <span><em>Curly Bob</em></span><svg class="i i--fill"><use href="#i-sparkle"/></svg>
+          <span>613 Blonde</span><svg class="i i--fill"><use href="#i-sparkle"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATEMENT -->
+    <section class="statement">
+      <div class="container">
+        <p class="eyebrow eyebrow--dark">Our philosophy</p>
+        <p class="statement__text">We believe a wig isn't a disguise — it's a <em>declaration.</em> Every Maison Tresse unit is hand-ventilated strand by strand from ethically sourced virgin hair, so it moves, shines and parts exactly like your own.</p>
+        <div class="stats">
+          <div class="stat"><b><span data-count="52000">52,000</span>+</b><span>Crowns delivered</span></div>
+          <div class="stat"><b><span data-count="4.9" data-dec="1">4.9</span><small>/5</small></b><span>Average rating</span></div>
+          <div class="stat"><b><span data-count="72">72</span>h</b><span>Hand-tied per unit</span></div>
+          <div class="stat"><b><span data-count="30">30</span><small>-day</small></b><span>Try-on guarantee</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BESTSELLERS (horizontal) -->
+    <section class="best" id="bestsellers">
+      <div class="hs">
+        <div class="hs__track" id="hTrack">
+          <div class="hs__intro">
+            <p class="eyebrow">Bestsellers</p>
+            <h2 class="title" data-split>The ones everyone's <em>asking</em> about.</h2>
+            <p class="muted">Six signature units, restocked every week. Keep scrolling to explore.</p>
+            <div class="hs__hint"><svg class="i"><use href="#i-arrow"/></svg></div>
+          </div>
+          <!-- feature cards injected -->
+          <a class="hs__end" href="#shop" data-cursor="Shop">
+            <span>View all</span>
+            <em>12 styles</em>
+            <svg class="i"><use href="#i-arrow"/></svg>
+          </a>
+        </div>
+        <div class="hs__progress" aria-hidden="true"><i></i></div>
+      </div>
+    </section>
+
+    <!-- SHOP -->
+    <section class="shop" id="shop">
+      <div class="container">
+        <header class="section-head">
+          <div>
+            <p class="eyebrow eyebrow--dark">The Collection</p>
+            <h2 class="title" data-split>Find your <em>texture.</em></h2>
+          </div>
+          <div class="toolbar">
+            <div class="filters" role="toolbar" aria-label="Filter by texture">
+              <span class="filters__pill" aria-hidden="true"></span>
+              <button class="is-active" data-filter="all" aria-pressed="true">All</button>
+              <button data-filter="straight" aria-pressed="false">Straight</button>
+              <button data-filter="wavy" aria-pressed="false">Wavy</button>
+              <button data-filter="curly" aria-pressed="false">Curly</button>
+              <button data-filter="coily" aria-pressed="false">Coily</button>
+              <button data-filter="bob" aria-pressed="false">Bob</button>
+              <button data-filter="colored" aria-pressed="false">Colour</button>
+            </div>
+            <label class="sort">
+              <span class="sr-only">Sort products</span>
+              <select id="sort">
+                <option value="featured">Featured</option>
+                <option value="low">Price: low to high</option>
+                <option value="high">Price: high to low</option>
+                <option value="rating">Top rated</option>
+              </select>
+            </label>
+          </div>
+        </header>
+        <p class="shop__count"><span id="resultCount">12</span> styles · every unit ships pre-plucked with bleached knots, an adjustable band and three combs.</p>
+        <div class="grid" id="grid"></div>
+      </div>
+
+      <div class="container promise">
+        <div class="promise__item">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 15c6-4 12 4 18 0s12-4 18 0M6 24c6-4 12 4 18 0s12-4 18 0M6 33c6-4 12 4 18 0s12-4 18 0"/><path d="M15 8v32M24 8v32M33 8v32"/></svg>
+          <h3>HD Swiss lace</h3>
+          <p>Ultra-thin lace that melts into every skin tone — no tinting, no lines.</p>
+        </div>
+        <div class="promise__item">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M16 6c-4 8 4 14 0 22s2 12 2 14M24 6c-4 8 4 14 0 22s2 12 2 14M32 6c-4 8 4 14 0 22s2 12 2 14"/></svg>
+          <h3>100% virgin hair</h3>
+          <p>Single-donor, cuticle-aligned and never chemically processed.</p>
+        </div>
+        <div class="promise__item">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="17"/><path d="M24 13v11l7 5"/></svg>
+          <h3>On in minutes</h3>
+          <p>Glueless fit with an adjustable band and combs. Pre-plucked and ready.</p>
+        </div>
+        <div class="promise__item">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M12 19a13 13 0 1 1-1 11"/><path d="M11 9v10h10"/></svg>
+          <h3>30-day try-on</h3>
+          <p>Love it or send it back. Free returns and exchanges, always.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WIG STUDIO -->
+    <section class="studio" id="studio">
+      <div class="container studio__grid">
+        <div class="stage-wrap">
+          <div class="stage" id="stage">
+            <canvas id="studioCanvas" aria-label="Live preview of your custom wig"></canvas>
+            <div class="stage__hint"><svg class="i i--fill"><use href="#i-sparkle"/></svg> Run your cursor through it</div>
+            <div class="stage__readout">
+              <div class="stage__name"><span id="stName">Body Wave</span></div>
+              <div class="stage__spec" id="stSpec">22" · 1B Natural Black</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <p class="eyebrow eyebrow--dark">Wig Studio</p>
+          <h2 class="title" data-split>Design it, <em>strand by strand.</em></h2>
+          <p class="muted-l">Choose your texture, length, colour and lace and watch it come to life. Your unit is then hand-made to order in 5–7 days.</p>
+
+          <div class="opt">
+            <div class="opt__head"><span class="opt__label">Texture</span><span class="opt__value" id="stTextureVal">Body Wave</span></div>
+            <div class="chips" id="stTexture"></div>
+          </div>
+          <div class="opt">
+            <div class="opt__head"><span class="opt__label">Length</span><span class="opt__value" id="stLenVal">22"</span></div>
+            <div class="range">
+              <input type="range" id="stLength" min="12" max="30" step="2" value="22" aria-label="Length in inches">
+              <div class="range__ticks"><span>12"</span><span>18"</span><span>24"</span><span>30"</span></div>
+            </div>
+          </div>
+          <div class="opt">
+            <div class="opt__head"><span class="opt__label">Colour</span><span class="opt__value" id="stColorVal">1B Natural Black</span></div>
+            <div class="swatch-row" id="stColor"></div>
+          </div>
+          <div class="opt opt--split">
+            <div>
+              <div class="opt__head"><span class="opt__label">Density</span></div>
+              <div class="chips" id="stDensity"></div>
+            </div>
+            <div>
+              <div class="opt__head"><span class="opt__label">Lace</span></div>
+              <div class="chips" id="stLace"></div>
+            </div>
+          </div>
+
+          <div class="total">
+            <div>
+              <small>Your unit · made to order</small>
+              <span class="total__price" id="stPrice">$0</span>
+            </div>
+            <button class="btn btn--gold magnetic" id="stAdd">Add to bag <svg class="i"><use href="#i-bag"/></svg></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ATELIER -->
+    <section class="atelier" id="atelier">
+      <div class="container">
+        <header class="atelier__head">
+          <p class="eyebrow">The Atelier</p>
+          <h2 class="title" data-split>From strand <em>to crown.</em></h2>
+        </header>
+        <div class="atelier__grid">
+          <div class="atelier__media" id="atelierMedia">
+            <img src="https://images.unsplash.com/photo-1634315775834-3e1ac73de6b6?auto=format&fit=crop&w=1000&q=80" alt="Rows of finished wigs displayed on mannequin heads">
+            <img src="https://images.unsplash.com/photo-1632809551194-84bd20de7614?auto=format&fit=crop&w=1000&q=80" alt="Close-up of a mannequin head used for ventilating wigs">
+            <img src="https://images.unsplash.com/photo-1605980626247-eb3a2f10ec8f?auto=format&fit=crop&w=1000&q=80" alt="Hair being coloured with foils in the studio">
+            <img src="https://images.unsplash.com/photo-1762745103094-6760fab8eb50?auto=format&fit=crop&w=1000&q=80" alt="Client with a freshly styled wig seated in the salon">
+            <span class="atelier__tag"><b id="atelierNum">01</b> / 04</span>
+          </div>
+          <div class="steps">
+            <div class="steps__line"><i></i></div>
+            <article class="step is-active">
+              <img class="step__img" src="https://images.unsplash.com/photo-1634315775834-3e1ac73de6b6?auto=format&fit=crop&w=800&q=75" alt="" loading="lazy">
+              <span class="step__num">01</span>
+              <h3>Sourced with care</h3>
+              <p>Single-donor virgin hair, ethically collected and traceable to its origin. Cuticles stay aligned in one direction, so it never tangles or mats.</p>
+            </article>
+            <article class="step">
+              <img class="step__img" src="https://images.unsplash.com/photo-1632809551194-84bd20de7614?auto=format&fit=crop&w=800&q=75" alt="" loading="lazy">
+              <span class="step__num">02</span>
+              <h3>Hand-ventilated</h3>
+              <p>Our artisans knot up to 150,000 strands by hand into Swiss HD lace — around 72 hours of work for a single unit.</p>
+            </article>
+            <article class="step">
+              <img class="step__img" src="https://images.unsplash.com/photo-1605980626247-eb3a2f10ec8f?auto=format&fit=crop&w=800&q=75" alt="" loading="lazy">
+              <span class="step__num">03</span>
+              <h3>Styled &amp; coloured</h3>
+              <p>Every unit is cut, coloured and set by a licensed stylist, then pre-plucked for a soft, natural hairline.</p>
+            </article>
+            <article class="step">
+              <img class="step__img" src="https://images.unsplash.com/photo-1762745103094-6760fab8eb50?auto=format&fit=crop&w=800&q=75" alt="" loading="lazy">
+              <span class="step__num">04</span>
+              <h3>Delivered ready</h3>
+              <p>Packed in our signature box with a satin bag, wig cap and care kit. Wear it the day it arrives.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOOKBOOK -->
+    <section class="look" id="lookbook">
+      <div class="look__marquee" aria-hidden="true"><span>#Worn<em>by</em>You — Styled <em>by</em> You — #Worn<em>by</em>You</span></div>
+      <div class="container">
+        <div class="look__head">
+          <p class="eyebrow eyebrow--dark">Lookbook</p>
+          <p class="muted-l">Real crowns from our community. Tap any look to shop it — and tag <b>@maisontresse</b> for a chance to be featured.</p>
+        </div>
+        <div class="look__cols" id="lookCols"></div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="reviews" id="reviews">
+      <div class="container reviews__head">
+        <div>
+          <p class="eyebrow">Reviews</p>
+          <h2 class="title" data-split>12,400 five-star <em>crowns.</em></h2>
+        </div>
+        <div class="score">
+          <b>4.9</b>
+          <div>
+            <div class="score__stars"><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg><svg class="i i--fill"><use href="#i-star"/></svg></div>
+            <small>Average from verified buyers</small>
+          </div>
+        </div>
+      </div>
+      <div class="reviews__row"><div class="reviews__track" id="reviewsA"></div></div>
+      <div class="reviews__row reviews__row--rev"><div class="reviews__track" id="reviewsB"></div></div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+      <div class="cta__blob cta__blob--1" aria-hidden="true"></div>
+      <div class="cta__blob cta__blob--2" aria-hidden="true"></div>
+      <div class="container">
+        <p class="eyebrow eyebrow--ink">The Inner Circle</p>
+        <h2 class="cta__title">Join the <em>Maison.</em></h2>
+        <p class="cta__lead">15% off your first crown, early access to limited drops and styling notes from our artists.</p>
+        <form class="cta__form" id="newsForm" novalidate>
+          <label class="sr-only" for="newsEmail">Email address</label>
+          <input id="newsEmail" type="email" placeholder="Your email address" required autocomplete="email">
+          <button class="btn btn--ink" type="submit"><span class="cta__btn-label">Subscribe</span> <svg class="i"><use href="#i-arrow"/></svg></button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__top">
+      <div class="footer__about">
+        <a class="logo" href="#top"><small>Maison</small><span>Tresse</span></a>
+        <p>Couture human-hair wigs, hand-made for every crown. Designed in our atelier, worn everywhere.</p>
+        <button class="to-top" id="toTop"><svg class="i"><use href="#i-arrow"/></svg> Back to top</button>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <ul><li><a href="#shop">All wigs</a></li><li><a href="#bestsellers">Bestsellers</a></li><li><a href="#studio">Wig Studio</a></li><li><a href="#shop">Gift cards</a></li></ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul><li><a href="#top">Shipping</a></li><li><a href="#top">Returns</a></li><li><a href="#top">Wig care</a></li><li><a href="#top">Contact</a></li></ul>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <ul><li><a href="#lookbook">Instagram</a></li><li><a href="#lookbook">TikTok</a></li><li><a href="#lookbook">Pinterest</a></li><li><a href="#lookbook">YouTube</a></li></ul>
+      </div>
+    </div>
+    <div class="footer__brand" aria-hidden="true">Maison <em>Tresse</em></div>
+    <div class="container footer__bottom">
+      <span>© 2026 Maison Tresse. All rights reserved.</span>
+      <div class="pay" aria-label="Accepted payments"><span>Visa</span><span>Mastercard</span><span>Amex</span><span>Apple Pay</span><span>Klarna</span></div>
+    </div>
+  </footer>
+
+  <!-- MOBILE MENU -->
+  <div class="menu layer" id="menu" aria-hidden="true" data-lenis-prevent>
+    <nav class="menu__links" aria-label="Mobile">
+      <a href="#shop">Shop</a>
+      <a href="#bestsellers">Bestsellers</a>
+      <a href="#studio">Wig <em>Studio</em></a>
+      <a href="#atelier">Atelier</a>
+      <a href="#lookbook">Lookbook</a>
+      <a href="#reviews">Reviews</a>
+    </nav>
+    <p class="menu__foot">Free express shipping over $250 · 30-day try-on</p>
+  </div>
+
+  <!-- SEARCH -->
+  <div class="search layer" id="search" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Search" data-lenis-prevent>
+    <div class="container search__inner">
+      <div class="search__bar">
+        <svg class="i"><use href="#i-search"/></svg>
+        <input type="search" id="searchInput" placeholder="Search wigs, textures, colours…" autocomplete="off" aria-label="Search products">
+        <button class="icon-btn" data-close aria-label="Close search"><svg class="i"><use href="#i-close"/></svg></button>
+      </div>
+      <div class="search__tags">
+        <span>Trending</span>
+        <button data-q="bob">Bob</button>
+        <button data-q="blonde">Blonde</button>
+        <button data-q="curly">Curly</button>
+        <button data-q="hd lace">HD lace</button>
+        <button data-q="afro">Afro</button>
+      </div>
+      <p class="search__title" id="searchTitle">Popular right now</p>
+      <div class="search__results" id="searchResults"></div>
+    </div>
+  </div>
+
+  <!-- QUICK VIEW -->
+  <div class="modal layer" id="qv" aria-hidden="true">
+    <div class="overlay" data-close></div>
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="qvName" data-lenis-prevent>
+      <button class="modal__close icon-btn" data-close aria-label="Close"><svg class="i"><use href="#i-close"/></svg></button>
+      <div class="qv__media"><img id="qvImg" alt=""></div>
+      <div class="qv__info">
+        <p class="eyebrow eyebrow--dark" id="qvStyle"></p>
+        <h3 id="qvName"></h3>
+        <div class="qv__rating" id="qvRating"></div>
+        <div class="qv__price" id="qvPrice"></div>
+        <p class="qv__desc" id="qvDesc"></p>
+        <div class="qv__opt"><span class="opt__label">Length</span><div class="chips" id="qvLengths"></div></div>
+        <ul class="qv__specs" id="qvSpecs"></ul>
+        <div class="qv__actions">
+          <div class="qty qty--lg"><button id="qvMinus" aria-label="Decrease quantity">−</button><span id="qvQty">1</span><button id="qvPlus" aria-label="Increase quantity">+</button></div>
+          <button class="btn btn--ink" id="qvAdd">Add to bag <svg class="i"><use href="#i-bag"/></svg></button>
+        </div>
+        <ul class="qv__perks"><li><svg class="i"><use href="#i-check"/></svg>Free express shipping over $250</li><li><svg class="i"><use href="#i-check"/></svg>30-day try-on guarantee</li><li><svg class="i"><use href="#i-check"/></svg>Ships within 24 hours</li></ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- CART DRAWER -->
+  <aside class="drawer layer is-empty" id="cart" aria-hidden="true">
+    <div class="overlay" data-close></div>
+    <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="Shopping bag">
+      <header class="drawer__head">
+        <h3>Your bag<sup data-cart-count>0</sup></h3>
+        <button class="icon-btn" data-close aria-label="Close bag"><svg class="i"><use href="#i-close"/></svg></button>
+      </header>
+      <div class="ship">
+        <p id="shipMsg">You're <b>$250</b> away from free express shipping</p>
+        <div class="ship__bar"><i id="shipBar"></i></div>
+      </div>
+      <ul class="lines" id="cartItems" data-lenis-prevent></ul>
+      <div class="drawer__empty">
+        <svg class="i"><use href="#i-bag"/></svg>
+        <h4>Your bag is empty</h4>
+        <p>Your next crown is waiting.</p>
+        <a class="btn btn--ink" href="#shop" data-close>Start shopping</a>
+      </div>
+      <footer class="drawer__foot">
+        <div class="subtotal"><span>Subtotal</span><b id="cartSubtotal">$0</b></div>
+        <button class="btn btn--ink btn--block" id="checkout">Checkout <svg class="i"><use href="#i-arrow"/></svg></button>
+        <p class="drawer__note">Taxes calculated at checkout · Pay in 4 with Klarna</p>
+      </footer>
+    </div>
+  </aside>
+
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "name": "maison-tresse",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Animated online wig store prototype",
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs"
+  }
+}
